@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/img-bg.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.96);
+}
+
+header {
+    color: rgba(0, 0, 0, 0.96);
+    text-align: left;
+    padding: 20px;
+}
+
+#skills-icons-left {
+    display: flex;
+    flex-direction: column; /* Display the icons vertically */
+    align-items: left; /* Align icons to the left */
+    margin-right: 20px; /* Add right margin for spacing */
+}
+
+#skills-icons-left img {
+    width: 50px;
+    height: auto;
+    margin: 5px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: left;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.96);
+    border: 1px solid rgba(0, 0, 0, 0.96);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    border-bottom: 5px solid rgba(0, 0, 0, 0.96);
+}
+
+section {
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.project, .article {
+    margin: 20px 0;
+}
+
+footer {
+    color: rgba(0, 0, 0, 0.96);
+    text-align: left;
+    padding: 10px;
+}
