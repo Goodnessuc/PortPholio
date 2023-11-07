@@ -17,14 +17,13 @@ header {
     padding: 20px;
 }
 
-#skills-icons-left {
+#skills-icons {
     display: flex;
     flex-direction: column; /* Display the icons vertically */
-    align-items: left; /* Align icons to the left */
     margin-right: 20px; /* Add right margin for spacing */
 }
 
-#skills-icons-left img {
+#skills-icons img {
     width: 50px;
     height: auto;
     margin: 5px;
@@ -69,4 +68,7 @@ footer {
     color: rgba(0, 0, 0, 0.96);
     text-align: left;
     padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
