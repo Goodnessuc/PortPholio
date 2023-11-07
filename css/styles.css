@@ -1,6 +1,4 @@
 body {
-    font-family: Arial, sans-serif;
-    background-image: url('../images/img-bg.png');
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center;
@@ -9,18 +7,26 @@ body {
     padding: 0;
     background-color: rgb(255, 255, 255);
     color: rgba(0, 0, 0, 0.96);
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 header {
     color: rgba(0, 0, 0, 0.96);
-    text-align: left;
+    text-align: center; /* Center the text horizontally */
     padding: 20px;
 }
 
 #skills-icons {
     display: flex;
     flex-direction: column; /* Display the icons vertically */
-    margin-right: 20px; /* Add right margin for spacing */
+    position: fixed; /* Fix the icons to the left */
+    left: 100px; /* Adjust the distance from the left side */
+    top: 50%; /* Position at the vertical center of the viewport */
+    transform: translateY(-50%); /* Center vertically using a transform */
 }
 
 #skills-icons img {
@@ -31,7 +37,7 @@ header {
 
 nav ul {
     list-style: none;
-    text-align: left;
+    text-align: center; /* Center the navigation links horizontally */
     padding: 10px 0;
 }
 
@@ -66,9 +72,13 @@ h1 {
 
 footer {
     color: rgba(0, 0, 0, 0.96);
-    text-align: left;
+    text-align: center; /* Center the footer text horizontally */
     padding: 10px;
-    position: fixed;
+    position: fixed; /* Fix the footer to the bottom */
     bottom: 0;
     left: 0;
+}
+
+.bio {
+    max-width: 615px;
 }
