@@ -1,84 +1,93 @@
 body {
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: white;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(255, 255, 255);
-    color: rgba(0, 0, 0, 0.96);
-    font-family: 'Roboto Mono', monospace;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", monospace;
+  height: 100dvh;
 }
 
 header {
-    color: rgba(0, 0, 0, 0.96);
-    text-align: center; /* Center the text horizontally */
-    padding: 20px;
+  color: rgba(0, 0, 0, 0.96);
+  text-align: center; /* Center the text horizontally */
+  padding: 20px;
 }
 
 #skills-icons {
-    display: flex;
-    flex-direction: column; /* Display the icons vertically */
-    position: fixed; /* Fix the icons to the left */
-    left: 100px; /* Adjust the distance from the left side */
-    top: 50%; /* Position at the vertical center of the viewport */
-    transform: translateY(-50%); /* Center vertically using a transform */
+  display: flex;
+  flex-direction: column; /* Display the icons vertically */
+  justify-content: center;
 }
 
 #skills-icons img {
-    width: 50px;
-    height: auto;
-    margin: 5px;
+  width: 50px;
+  height: auto;
+  margin: 5px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
 }
 
 nav ul {
-    list-style: none;
-    text-align: center; /* Center the navigation links horizontally */
-    padding: 10px 0;
+  width: 625px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 20px;
+  border: 1px solid rgba(0, 0, 0, 0.96);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+nav ul li:hover {
+  border-bottom: 5px solid rgba(0, 0, 0, 0.96);
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.96);
-    border: 1px solid rgba(0, 0, 0, 0.96);
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-nav ul li a:hover {
-    border-bottom: 5px solid rgba(0, 0, 0, 0.96);
-}
-
-section {
-    padding: 20px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.96);
 }
 
 h1 {
-    margin: 0;
+  margin: 0;
 }
 
-.project, .article {
-    margin: 20px 0;
+.project,
+.article {
+  margin: 20px 0;
 }
 
 footer {
-    color: rgba(0, 0, 0, 0.96);
-    text-align: center; /* Center the footer text horizontally */
-    padding: 10px;
-    position: fixed; /* Fix the footer to the bottom */
-    bottom: 0;
-    left: 0;
+  position: fixed; /* Fix the footer to the bottom */
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .bio {
-    max-width: 615px;
+  max-width: 615px;
+}
+
+main {
+  margin: 0 5%;
+  display: flex;
+  height: calc(100dvh - 125.5px);
+}
+
+.main-body {
+  flex-grow: 1;
+  display: grid;
+  place-content: center;
+  padding: 0 24px;
+}
+
+@media screen and (max-width: 768px) {
+  #skills-icons {
+    left: 3%;
+  }
 }
