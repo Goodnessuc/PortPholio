@@ -2,18 +2,25 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto Mono", monospace;
-  height: 100dvh;
+  height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling on small screens */
 }
 
 header {
   color: rgba(0, 0, 0, 0.96);
-  text-align: center; /* Center the text horizontally */
+  text-align: center;
   padding: 20px;
 }
 
 #skills-icons {
-  display: flex;
-  flex-direction: column; /* Display the icons vertically */
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*justify-content: center;*/
+  /*margin-left: auto; !* Move it to the right on smaller screens *!*/
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
   justify-content: center;
 }
 
@@ -29,19 +36,21 @@ nav {
 }
 
 nav ul {
-  width: 625px;
+  max-width: 100%; /* Make the menu full-width on small screens */
   list-style: none;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   padding: 10px 0;
+  margin: 0; /* Remove the default margin */
 }
 
 nav ul li {
   border: 1px solid rgba(0, 0, 0, 0.96);
   padding: 5px 10px;
   border-radius: 5px;
+  margin: 5px; /* Add some margin between list items on small screens */
 }
 
 nav ul li:hover {
@@ -63,10 +72,11 @@ h1 {
 }
 
 footer {
-  position: fixed; /* Fix the footer to the bottom */
+  position: fixed;
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
+  width: 100%; /* Make the footer full-width on small screens */
 }
 
 .bio {
@@ -76,7 +86,10 @@ footer {
 main {
   margin: 0 5%;
   display: flex;
-  height: calc(100dvh - 125.5px);
+  flex-direction: column;
+  flex-wrap: wrap; /* Allow the content to wrap on small screens */
+  justify-content: center; /* Center the content on small screens */
+  align-items: center; /* Center vertically on small screens */
 }
 
 .main-body {
@@ -88,6 +101,29 @@ main {
 
 @media screen and (max-width: 768px) {
   #skills-icons {
-    left: 3%;
+    left: auto; /* Reset left property for small screens */
+    margin-right: auto; /* Move to the right on small screens */
+  }
+
+  nav ul {
+    justify-content: center; /* Center the menu items on small screens */
+  }
+
+  nav ul li {
+    margin: 5px;
+  }
+
+  footer {
+    position: static; /* Reset the footer position for small screens */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /*nav ul {*/
+  /*  flex-direction: column; !* Stack the menu items on small screens *!*/
+  /*}*/
+
+  nav ul li {
+    margin: 5px 0; /* Add margin between stacked menu items */
   }
 }
